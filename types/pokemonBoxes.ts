@@ -1,5 +1,5 @@
 
-export interface Box {
+export interface PokemonBoxes {
   id: number;
   name: string;
   boxType: string;
