@@ -1,4 +1,4 @@
-import { Box } from './pokemonBoxes'
+import { PokemonBoxes } from './pokemonBoxes'
 export interface CardType {
   id: number;
   name: string;
@@ -17,5 +17,5 @@ export interface PokemonCard {
   rarity: string;
   attacks: string[];
   cardType: CardType;
-  featuredInBox?: Box;
+  featuredInBox?: PokemonBoxes;
 }

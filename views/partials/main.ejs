@@ -1,15 +1,11 @@
 <main>
   <h2>Aantal kaarten in ons assortiment</h2>
 
-  <% for(let i=0 ;i < pokemonCards.length;i++){ %>
-    <article>
-      <% if(i<4){%>
-
-        <img src="<%= pokemonCards[i].imageUrl %>" alt="Pokémon kaart">
-
-
-
-        <%}%>
-    </article>
-    <%}%>
+  <% for(let i=0; i < pokemonCards.length; i++) { %>
+    <% if(i < 4) { %>
+      <article>
+        <img src="<%= pokemonCards[i].imageUrl %>" alt="<%= pokemonCards[i].name%>">
+      </article>
+      <% } %>
+        <% } %>
 </main>
