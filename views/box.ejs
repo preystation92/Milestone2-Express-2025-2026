@@ -1,14 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('partials/header') %>
+  <main>
+    <%- include('partials/nav')%>
+      <h2>Onze kaarten</h2>
+      <% for(let i=0;i < pokemonBoxes.length;i++) {%>
+        <article>
+          <img src="<%= pokemonBoxes[i].imageUrl %>" alt="<%= pokemonBoxes[i].name %>">
+          <h3>Naam:</h3>
+          <%= pokemonBoxes[i].name%>
+        </article>
+        <%}%>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
 
-<body>
-  dadada
-</body>
-
-</html>
+  </main>
+  <%- include('partials/footer') %>

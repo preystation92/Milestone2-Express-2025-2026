@@ -5,9 +5,9 @@
       <% for(let i=0 ;i < pokemonCards.length;i++){ %>
         <article>
           <img src="<%= pokemonCards[i].imageUrl %>" alt="Pokémon kaart">
-          <h2>Pokemon: <%= pokemonCards[i].name%>
+          <h3>Pokemon: <%= pokemonCards[i].name%>
               ID: <%= pokemonCards.id%>
-          </h2 </article>
+          </h3 </article>
           <%}%>
   </main>
   <%- include('partials/footer') %>

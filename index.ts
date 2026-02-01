@@ -3,6 +3,7 @@ import ejs from 'ejs'
 import { PokemonCard } from './types/pokemonCards'
 import { PokemonBoxes } from './types/pokemonBoxes'
 import { fetchData } from './myfunctions/functions'
+import cardRouter from './routers/routes/cards'
 const app = express()
 app.use(express.static("public"))
 app.set("view engine", "ejs")
@@ -17,6 +18,8 @@ app.get("/", async (req, res) => {
 
   res.render("index", { shopName, shopDescription, pokemonCards })
 })
+
+
 app.get("/card", async (req, res) => {
   let response = await fetch("https://raw.githubusercontent.com/preystation92/Milestone_1_Terminal-App/main/milestone-1/jsonFiles/pokemonCards.json")
   let pokemonCards: PokemonCard = await response.json();
